@@ -1,6 +1,8 @@
 export type Canal = "SMS" | "EMAIL" | "WHATSAPP";
 export type StatusEnvio = "PENDENTE" | "ENVIADO" | "FALHA" | "CANCELADO";
 
+
+
 export interface Lembrete {
   id: number;
   paciente: string;
@@ -12,7 +14,7 @@ export interface Lembrete {
 }
 
 // unions + intersection para pontuar no TS
-export type Id = number | `${number}`;
+export type Id = string | number;
 export type LembreteDTO = Omit<Lembrete, "id" | "status"> & {
   id?: number;
   status?: StatusEnvio;
