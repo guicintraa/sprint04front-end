@@ -11,6 +11,7 @@ export default function NavMenu() {
     <nav className="bg-blue-600 shadow-md">
       <ul className="flex justify-center gap-6 py-4">
         <li><Link to="/" className={linkClasses("/")}>Início</Link></li>
+        <li><NavLink to="/lembretes">Lembretes</NavLink></li>
         <li><Link to="/integrantes" className={linkClasses("/integrantes")}>Integrantes</Link></li>
         <li><Link to="/faq" className={linkClasses("/faq")}>FAQ</Link></li>
         <li><Link to="/contato" className={linkClasses("/contato")}>Contato</Link></li>

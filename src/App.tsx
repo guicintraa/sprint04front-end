@@ -1,3 +1,8 @@
+import Lembretes from "./pages/Lembretes";
+import LembreteDetalhe from "./pages/LembreteDetalhe";
+import LembreteForm from "./pages/LembreteForm";
+
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,6 +24,11 @@ export default function App() {
         <NavMenu />
         <main className="flex-1 p-4">
           <Routes>
+            <Route path="/lembretes" element={<Lembretes />} />
+<Route path="/lembretes/novo" element={<LembreteForm />} />
+<Route path="/lembretes/:id" element={<LembreteDetalhe />} />
+<Route path="/lembretes/:id/editar" element={<LembreteForm />} />
+
             <Route path="/" element={<Home />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contato" element={<Contato />} />
