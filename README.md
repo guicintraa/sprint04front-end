@@ -3,28 +3,48 @@ Guilherme Batista Cintra RM 562850
 Davi Tagawa Schincaglia Lima Lemos RM 563457
 Caio Felipe Silva RM 564615
 
-ESTRUTURA: 
-├── node_modules/
-├── public/
-│   ├── imagens/
-│   └── vite.svg
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-├── .gitignore
-├── eslint.config.js
+SPRINT04-LEMBRETES/
+│
 ├── index.html
-├── package-lock.json
 ├── package.json
-├── README.md
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
-└── vite.config.ts
+├── package-lock.json
+├── vite.config.ts
+├── vercel.json
+├── .env.example
+│
+├── public/
+│   ├── data/
+│   │     └── lembretes.json   # Mock local usado caso a API não esteja disponível
+│   └── imagens/
+│         ├── fiap.png
+│         ├── health-care5.png
+│         └── NOT_FOUND.png
+│
+└── src/
+    ├── App.tsx                  # Configuração de rotas
+    ├── index.css                # Configuração do TailwindCSS
+    ├── main.tsx                 # Renderização principal
+    │
+    ├── types.ts                 # Modelos TypeScript do sistema
+    ├── services/
+    │     └── api.ts             # Cliente de API + fallback local
+    │
+    ├── components/
+    │     ├── Header.tsx
+    │     ├── Footer.tsx
+    │     ├── NavMenu.tsx
+    │     └── FAQItem.tsx
+    │
+    └── pages/
+          ├── Home.tsx
+          ├── FAQ.tsx
+          ├── Contato.tsx
+          ├── Integrantes.tsx
+          ├── NotFound.tsx
+          │
+          ├── Lembretes.tsx        # Listagem de lembretes
+          ├── LembreteDetalhe.tsx # Visualização completa
+          └── LembreteForm.tsx    # Formulário criar/editar
 
 ---------------------------
 
@@ -40,14 +60,18 @@ https://github.com/guicintraa/projetoHcChallenge
 
 ---------------------------
 
-TECNOLOGIAS USADAS :
-- GIT / GIT HUB
-- REACT 
-- TYPE SCRIPT
-- TAILWIND
+Tecnologia	Uso
+React 18	Biblioteca principal para a construção da interface
+Vite	Ferramenta de build para aplicações React + TS
+TypeScript	Tipagem estática e definição de modelos de dados
+React Router DOM	Navegação e rotas dinâmicas
+TailwindCSS	Estilização e responsividade
+Fetch API	Requisições HTTP para integração com API
+Vercel	Deploy da aplicação
+Git + GitHub	Versionamento e colaboração entre os integrantes
 ----------------------------
 
-LINK DA APRESENTAÇÃO DO TRABALHO : https://youtu.be/5z2zlCpdpsg
+
 
 ---------------------------
 # React + TypeScript + Vite
